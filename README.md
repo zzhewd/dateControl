@@ -1,2 +1,4 @@
 # dateControl
-日期插件
+```
+Look at the HTML example
+```
