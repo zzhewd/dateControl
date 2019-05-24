@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li,
+ol,
+dl {
+    list-style: none;
+}
+
+#outer_frame {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 290px;
+    border: 1px solid #e4e7ed;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+    background: #fff;
+    border-radius: 4px;
+    color: #606266;
+    /*display: none;*/
+}
+
+.dateShow_or_dateBtn {
+    height: 40px;
+    width: 100%;
+    /*background: #f0f;*/
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    justify-content: space-around;
+}
+
+.dateBtn_lastYear,
+.dateBtn_lastMonth,
+.dateBtn_nextMonth,
+.dateBtn_nextYear {
+    height: calc(100%-10px);
+    cursor: pointer;
+    width: 40px;
+    /*background: #fff;*/
+    text-align: center;
+    padding-top: 10px;
+}
+
+.date_show {
+    height: calc(100%-10px);
+    margin-left: 10px;
+    /*background: #fff;*/
+    text-align: center;
+    padding-top: 10px;
+    margin-right: 10px;
+    cursor: default;
+}
+
+.dateControl_list {
+    width: 100%;
+    /*height: calc(100% - 40px);*/
+    /*background: #0ff;*/
+}
+
+.dateControl_list .dateControl_list_week {
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    cursor: default;
+    /*padding-left: 5px;*/
+}
+
+.dateControl_list .dateControl_list_week ul {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.dateControl_list .dateControl_list_week ul li {
+    height: calc(100%-10px);
+    padding-top: 10px;
+    text-align: center;
+    width: 40px;
+    /*background: #fff;*/
+}
+
+.dateControl_list .dateControl_list_days {
+    /*height: calc(100% - 40px);*/
+    width: 100%;
+    /*display: flex;*/
+}
+
+.dateControl_list .dateControl_list_days span {
+    height: 32px;
+    width: 40px;
+    display: inline-block;
+    padding-top: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.dateControl_list .dateControl_list_days span:hover {
+    color: #409eff;
+}
+
+.dateControl_list .dateControl_list_days span.uglify {
+    color: #ccc;
+}
+
+.dateControl_list .dateControl_list_days span.dateList_select {
+    color: #409eff;
+}
