@@ -1,11 +1,11 @@
 /**
- * Author:zhangzhe
+ * Created by zhangzhe on 2019/5/22
  * Email:544785380@qq.com
  * @params
  * elem:input节点id
- * number:传入显示一个或2个日期控件, 传入1 or 2
- * date:需要返回的日期类型,传入 yyyy-MM-dd or yyyy-MM or yyyy or HH:mm:ss or yyyy-MM-dd HH:mm:ss or 自定义格式
- * type:返回的数据类型
+ * number:传入显示一个或2个日期控件, 传入1 or 2(暂未实现)
+ * date:需要返回的日期类型,传入 yyyy-MM-dd or yyyy-MM or yyyy or HH:mm:ss or yyyy-MM-dd HH:mm:ss or 自定义格式(暂未实现)
+ * type:返回的数据类型(暂未实现)
  **/
 const { log } = console;
 
@@ -210,7 +210,7 @@ DateContainer.prototype = {
             }
             if (that.clickFlag === true) {
                 return;
-            };
+            }
         };
         this.blurFunc();
         this.clickOtherAreaRemList();
@@ -272,7 +272,7 @@ DateContainer.prototype = {
     },
     clickOtherAreaRemList: function() { //点其他区域删除日期组件
         var that = this;
-        document.onclick = function() {
+        document.addEventListener('click', function() {
             if (that.clickFlag === false) {
                 for (var i = 0; i < that.clickElem.parentNode.children.length; i++) {
                     if (that.clickElem.parentNode.children[i] === that.outerFrame) {
@@ -283,6 +283,6 @@ DateContainer.prototype = {
             } else {
                 return;
             }
-        }
+        });
     }
 }
